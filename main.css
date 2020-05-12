@@ -1,0 +1,82 @@
+.box{
+    position: relative;
+    color: white;
+    margin-left: 500px;
+}
+.position{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+p{
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
+.box-1{
+    background: #007E3E; 
+    transform: rotate(-45deg) skew(15deg, 15deg);
+
+}
+.box-2{
+    background: blue; 
+    transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+ 
+}
+.box-3{
+    background: purple; 
+    transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}
+
+
+/* SMILE */
+.smile{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: rosybrown;
+    position: relative;
+}
+.smile::before, .smile::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    border: 3px solid black;
+    border-radius: 50%;
+    background: seashell;
+    top: 40px;
+    animation: eye 8s ease-in-out infinite;
+}
+.smile::before{
+    left: 55px;
+}
+.smile::after{
+    right: 55px;
+}
+@keyframes eye{
+    10%{transform: scaleY(1.0);}
+    30%{transform: scaleY(0.1);}
+    50%{transform: scaleY(1);}
+    80%{transform: scaleY(0.1);}
+}
+/* .................................. */
+
+.radius {
+    position: absolute;
+    width: 8em;
+    height: 4em;
+    border: 5px solid red;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    background: mistyrose;
+    right: 30px;
+    bottom: 20px;
+    animation: smile 8s ease-in-out infinite;
+  }
+  @keyframes smile{
+    10%{transform: scaleY(1);}
+    30%{transform: scaleY(0.1);}
+    50%{transform: scaleY(1);}
+    80%{transform: scaleY(0.1);}
+}
